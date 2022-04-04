@@ -8,6 +8,10 @@
 7. usar el metodo eliminar en el endpoint `http://127.0.0.1:5000/api/delete/id` el cual debes de pasar por la url el id del vehiculo para eliminarlo.
 8. Para ver cada efecto de los distintos endpoints se puede visualizar con la ruta: `http://127.0.0.1:5000/api/view` 
  
+# Ejemplo: 
+
+![Image text](https://github.com/Esekien/App-rastreo-api/blob/main/imagen%20creada.png)
+ 
  ## Nota: para ejecutar la Api se debe de ejecutar el archivo app.py
  
  ### No logre agregar la autentificacion de usuario por cuestiones de tiempo sin embargo ya lo he implementado antes con JWT y tokens. Una disculpa y espero que esta api sirva de algo.
