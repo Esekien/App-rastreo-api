@@ -6,6 +6,7 @@
 5. usar el metodo create para crear vehiculos en el endpoint: `http://127.0.0.1:5000/api/create` el cual recibe los parametros de: `plates, lat, lon y user_id` enviar en formato form del postman o thunder client.
 6. usar el metodo actualizar en el endpoint `http://127.0.0.1:5000/api/update/id` el cual recibe los parametros de: `plates, lat, lon y user_id` enviar en formato form del postman o thunder client, ademas de pasar el id del vehiculo en la url
 7. usar el metodo eliminar en el endpoint `http://127.0.0.1:5000/api/delete/id` el cual debes de pasar por la url el id del vehiculo para eliminarlo.
+8. Para ver cada efecto de los distintos endpoints se puede visualizar con la ruta: `http://127.0.0.1:5000/api/view` 
  
  ## Nota: para ejecutar la Api se debe de ejecutar el archivo app.py
  
