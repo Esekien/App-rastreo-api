@@ -42,3 +42,25 @@ class route():
         db.session.commit()
 
         return jsonify({"message": "vehiculo agregado"}) 
+
+    @routes.route("/update/<id>", methods=["PUT"])
+    def update(id):
+
+        vehiculo = Vehiculo.query.get(id)
+        print(vehiculo.user_id)
+        if vehiculo.user_id == 1:
+            plates =  request.values.get("plates", type=str, default=None)
+            lat =  request.values.get("lat", type=str, default=None)
+            lon =  request.values.get("lon", type=str, default=None)
+            user_id = 1
+
+            vehiculo.plates = plates
+            vehiculo.lat = lat
+            vehiculo.lon = lon
+            vehiculo.user_id = user_id
+
+            db.session.commit()
+
+            return vehiculo_schema.jsonify(vehiculo)
+        return jsonify({"message": "usuario incorrecto para este vehiculo"}) 
+        
