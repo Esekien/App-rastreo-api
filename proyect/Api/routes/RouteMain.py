@@ -63,4 +63,13 @@ class route():
 
             return vehiculo_schema.jsonify(vehiculo)
         return jsonify({"message": "usuario incorrecto para este vehiculo"}) 
+
+    @routes.route("/delete/<id>", methods=["DELETE"])
+    def delete(id):
+        vehiculo = Vehiculo.query.get(id)
+        if vehiculo.user_id == 1:
+            db.session.delete(vehiculo)
+            db.session.commit()
+            return vehiculo_schema.jsonify(vehiculo)
+        return jsonify({"message": "usuario incorrecto para este vehiculo"}) 
         
